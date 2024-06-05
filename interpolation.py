@@ -171,9 +171,11 @@ def solve(xs, ys, x, n):
             continue
 
         if (method is gauss_polynomial or method is stirling_polynomial) and len(xs) % 2 == 0:
+            print(f"Odd number of nodes is required for {name}.")
             continue
 
         if method is bessel_polynomial and len(xs) % 2 == 1:
+            print(f"Even number of nodes is required for {name}.")
             continue
 
         h = xs[1] - xs[0]

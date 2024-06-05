@@ -167,11 +167,10 @@ def main():
 
         if len(set(xs)) != len(xs):
             print('All interpolation nodes have to be different. Please, retry your input.')
-        elif xs != sorted(xs):
-            print('Interpolation nodes have to be sorted. Please, retry your input.')
         else:
             break
 
+    xs = sorted(xs)
     solve(xs, ys, x, n)
 
 
